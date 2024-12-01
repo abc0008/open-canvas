@@ -1,5 +1,5 @@
 export const LANGGRAPH_API_URL =
-  process.env.LANGGRAPH_API_URL ?? "http://localhost:54367";
+  process.env.LANGGRAPH_API_URL ?? "http://localhost:59568";
 // v2 is tied to the 'open-canvas-prod' deployment.
 export const ASSISTANT_ID_COOKIE = "oc_assistant_id_v2";
 // export const ASSISTANT_ID_COOKIE = "oc_assistant_id";
@@ -85,3 +85,20 @@ export type ALL_MODEL_NAMES =
   | FIREWORKS_MODEL_NAMES
   | GEMINI_MODEL_NAMES
   | AZURE_MODEL_NAMES;
+
+// Add type definitions for your configuration
+export interface LangGraphConfig {
+  checkpointer: any; // Replace with specific type
+  streamMode?: "values" | "events";
+  configurable?: {
+    thread_id?: string;
+  };
+}
+
+// Define constants for graph nodes and edges
+export const GRAPH_NODES = {
+  START: "__start__",
+  END: "__end__",
+  AGENT: "agent",
+  TOOLS: "tools"
+} as const;

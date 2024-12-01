@@ -1,0 +1,3 @@
+[console_scripts]
+langgraph-api-inmem=langgraph_api.cli:main
+
