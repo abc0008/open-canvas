@@ -1,5 +1,5 @@
 export const LANGGRAPH_API_URL =
-  process.env.LANGGRAPH_API_URL ?? "http://localhost:59568";
+  process.env.LANGGRAPH_API_URL ?? "http://localhost:63686";
 // v2 is tied to the 'open-canvas-prod' deployment.
 export const ASSISTANT_ID_COOKIE = "oc_assistant_id_v2";
 // export const ASSISTANT_ID_COOKIE = "oc_assistant_id";
@@ -40,6 +40,21 @@ export const OPENAI_MODELS = [
     label: "GPT-4o mini",
     isNew: false,
   },
+  {
+    name: "chatgpt-4o-latest",
+    label: "GPT-4o",
+    isNew: false,
+  },
+  {
+    name: "o1-mini",
+    label: "o1 Mini",
+    isNew: false,
+  },
+  {
+    name: "o1-preview",
+    label: "o1 Preview",
+    isNew: true,
+  },
 ];
 
 export const ANTHROPIC_MODELS = [
@@ -53,10 +68,11 @@ export const ANTHROPIC_MODELS = [
     label: "Claude 3 Haiku (old)",
     isNew: false,
   },
-  // {
-  //   name: "claude-3-5-sonnet-20240620",
-  //   label: "Claude 3.5 Sonnet",
-  // },
+  {
+    name: "claude-3-5-sonnet-20241022",
+    label: "Claude 3.5 Sonnet",
+    isNew: true,
+  },
 ];
 export const FIREWORKS_MODELS = [
   {
@@ -71,6 +87,21 @@ export const GEMINI_MODELS = [
     name: "gemini-1.5-flash",
     label: "Gemini 1.5 Flash",
     isNew: false,
+  },
+  {
+    name: "gemini-1.5-flash-8b",
+    label: "Gemini 1.5 Flash 8B",
+    isNew: true,
+  },
+  {
+    name: "gemini-1.5-pro-002",
+    label: "Gemini 1.5 Pro",
+    isNew: true,
+  },
+  {
+    name: "gemini-exp-1121",
+    label: "Gemini 1.5 Pro Experimental",
+    isNew: true,
   },
 ];
 export const DEFAULT_MODEL_NAME: ALL_MODEL_NAMES = "gpt-4o-mini";

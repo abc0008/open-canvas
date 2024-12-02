@@ -167,7 +167,7 @@ export const getModelConfig = (
     };
   }
 
-  if (customModelName.includes("gpt-")) {
+  if (customModelName.includes("gpt-") || customModelName.includes("o1") || customModelName.includes("chatgpt")) {
     return {
       modelName: customModelName,
       modelProvider: "openai",
